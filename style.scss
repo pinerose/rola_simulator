@@ -1,0 +1,64 @@
+@charset "utf-8";
+
+//함수 정의
+
+@mixin flex-display($input){
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: $input;
+    align-content: $input;
+}
+
+@mixin width-height($input, $input2){
+    width: $input;
+    height: $input2;
+}
+
+
+
+
+body{
+    @include width-height(100%, 50rem)
+}
+
+#wrap{
+    background-color: aliceblue;
+    @include width-height(100%, 60rem);
+    @include flex-display(center)
+}
+
+#before_simulating{
+    @include width-height(100%, 50%);
+
+    div:not(:nth-child(1)){
+        display: none;
+    }
+
+    div:first-child{
+        @include width-height(95%, 50%);
+        margin: 0 auto;
+        @include flex-display(space-evenly);
+        
+        span{
+            @include width-height(100%, 10%);
+            text-align: center;
+        }
+
+        p{
+            @include width-height(15%, 20%);
+            margin: auto;
+             
+            input{
+                @include width-height(100%, 40%)
+            }
+        }
+
+        button{
+            @include width-height(20%, 15%);
+        }
+        
+        button:last-child{
+            @include width-height(40%, 15%)
+        }
+    }
+}

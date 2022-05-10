@@ -1,0 +1,53 @@
+body {
+  width: 100%;
+  height: 50rem;
+}
+
+#wrap {
+  background-color: aliceblue;
+  width: 100%;
+  height: 60rem;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-content: center;
+}
+
+#before_simulating {
+  width: 100%;
+  height: 50%;
+}
+#before_simulating div:not(:nth-child(1)) {
+  display: none;
+}
+#before_simulating div:first-child {
+  width: 95%;
+  height: 50%;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  align-content: space-evenly;
+}
+#before_simulating div:first-child span {
+  width: 100%;
+  height: 10%;
+  text-align: center;
+}
+#before_simulating div:first-child p {
+  width: 15%;
+  height: 20%;
+  margin: auto;
+}
+#before_simulating div:first-child p input {
+  width: 100%;
+  height: 40%;
+}
+#before_simulating div:first-child button {
+  width: 20%;
+  height: 15%;
+}
+#before_simulating div:first-child button:last-child {
+  width: 40%;
+  height: 15%;
+}/*# sourceMappingURL=style.css.map */
